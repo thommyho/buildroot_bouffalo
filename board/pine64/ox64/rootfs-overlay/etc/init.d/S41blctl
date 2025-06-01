@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Connect to the specified Wi-Fi network
+blctl connect_ap "YOUR-WIFI-SSID" "YOUR-WIFI-PASSWORD"
+
+# Wait until the connection is established
+sleep 4s
+
+# Configure IP address using udhcpc
+udhcpc -i bleth0
